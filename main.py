@@ -55,7 +55,7 @@ def send_convert(message: Message) -> None:
     """ Function for getting currency from which program is going to convert """
     user_id = message.from_user.id
     if User.get_or_none(User.user_id == user_id) is None:
-        bot.reply_to(message, "Вы не зарегистрированы. Напишите /start")
+        bot.reply_to(message, "You're not registered. Enter /start")
         return
 
     bot.send_message(message.chat.id, f'List of all available currencies to convert: {currency_api.get_currencies()}')
@@ -97,7 +97,7 @@ def final_convert(message: Message, convert_from: str, convert_to: str) -> Union
         bot.send_message(message.chat.id, f'{amount} {convert_from} in {convert_to} equals {result['amount']}')
     except Exception:
         bot.send_message(message.chat.id, 'Something went wrong. '
-                                                  'Entered value is possibly not a digit. Try again:')
+                                               'Entered value is possibly not a digit. Try again:')
         get_amount(message, convert_from)
 
 
