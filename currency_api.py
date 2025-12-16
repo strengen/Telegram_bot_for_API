@@ -1,7 +1,5 @@
 from typing import Set, Dict
 import requests
-import json
-
 
 from config import API_KEY
 from currencies import CURRENCIES
