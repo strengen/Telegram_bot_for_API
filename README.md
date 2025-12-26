@@ -16,42 +16,18 @@ This project was created for educational purposes and demonstrates working with 
 
 ## Installation and Setup
 
-Clone the repository:
+1. Clone the repository:
 
-```bash
-git clone https://github.com/USERNAME/REPOSITORY.git
-cd Telegram_bot_for_API
-```
-Create and activate a virtual environment:
-```bash
-python -m venv .venv
-```
-
-Windows:
-```bash
-.venv\Scripts\activate
-```
-
-Linux / macOS:
-```bash
-source .venv/bin/activate
-```
-
-Install dependencies:
+2. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-Create a .env file in the project root with the following variables:
+3. Create a .env file in the project root with the following variables:
 ```env
 BOT_TOKEN=your_telegram_bot_token
 API_KEY=your_amdoren_api_key
 DB_PATH=database.db
-```
-
-Run the bot:
-```bash
-python bot.py
 ```
 
 After running the bot will be available in Telegram.

@@ -10,6 +10,7 @@ from config import DB_PATH
 from datetime import datetime
 
 db = SqliteDatabase(DB_PATH)
+DATE_FORMAT = '%d-%m-%Y %H:%M:%S'
 
 class BaseModel(Model):
     class Meta:
@@ -20,7 +21,7 @@ class User(BaseModel):
     username = CharField()
     first_name = CharField()
     last_name = CharField(null=True)
-    registry_date = DateTimeField(default=datetime.now)
+    registry_date = DateTimeField(default=datetime.now().strftime(DATE_FORMAT))
 
     def __str__(self):
         return (f'username: {self.username}, First Name: {self.first_name}, '
